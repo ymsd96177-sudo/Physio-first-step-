@@ -7,8 +7,18 @@ void main() async {
   // التأكد من تهيئة حزم التطبيق قبل التشغيل
   WidgetsFlutterBinding.ensureInitialized();
   // تهيئة Firebase (يجب ربط تطبيقك بـ Firebase Console أولاً لتشغيل الكود بنجاح)
-  await Firebase.initializeApp();
-  
+    await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyC4xjYGb3LAZjDWkcLh5g5vZ3Z6EdMMHCc",
+      authDomain: "physio-first-step.firebaseapp.com",
+      projectId: "physio-first-step",
+      storageBucket: "physio-first-step.firebasestorage.app",
+      messagingSenderId: "695874345500",
+      appId: "1:695874345500:web:845a8bccc08816683f9dd9",
+      measurementId: "G-C5VTQMM937",
+    ),
+  );
+
   runApp(const PhysioFirstStepApp());
 }
 
